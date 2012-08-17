@@ -1,12 +1,10 @@
 import urllib2
 
-def getPage():
-	url = "http://www.pythonchallenge.com/pc/def/linkedlist.php"
-	
+def getPage(bs):
+	url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + str(bs)
+	print url
 	req = urllib2.Request(url)
 	response = urllib2.urlopen(req)
 	return response.read()
 	
-if __name__ == "__main__":
-	namesPage = getPage()
-	print namesPage
+print getPage("12345")
