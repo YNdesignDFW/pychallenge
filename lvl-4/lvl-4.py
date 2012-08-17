@@ -1,7 +1,7 @@
 import urllib2
 
 def getPage():
-	url = "http://www.google.com"
+	url = "http://www.pythonchallenge.com/pc/def/linkedlist.php"
 	
 	req = urllib2.Request(url)
 	response = urllib2.urlopen(req)
