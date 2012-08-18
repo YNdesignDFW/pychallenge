@@ -1,16 +1,18 @@
 import urllib2
 
 def getPage(endString):
-	#This function takes the standard ?nothing= URL suffix and adds on endString
-	#Found by autoloading and searching each page for a numeric value
+	#url holds the attached string of the baseline URL that does not change 
+	#and endString, the string that is located by another function and passed to 
+	#this one as a parameter
 	url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + str(endString)
-	print url
+	#uncomment "print url" below as needed for debugging purposes
+	#print url 
 	req = urllib2.Request(url)
 	response = urllib2.urlopen(req)
 	return response.read()
 	
 
-newPage = getPage("12345")
+newPage = getPage("43650")
 nextPage = ""
 x = 0
 while x <= 400:
